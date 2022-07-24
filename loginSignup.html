@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Login/Signup</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style2.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+<br>
+<br>
+<div class="cont">
+  <form action="/log" method="post">
+    <div class="form sign-in">
+      <h2>Welcome</h2>
+
+      <label>      
+        <span>Are a You Creator ??</span>
+        <label class="switch">
+          <input type="checkbox" value="yes" name="creator" id="creator"/>
+          <span id = "s" class="slider round"></span>
+      </label>
+      </label>
+
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" placeholder="Email" id="email" />
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="pswd" placeholder="Password" id="pswd"/>
+      </label>
+      <!-- <p class="forgot-pass">Forgot password?</p> -->
+      <button type="submit" class="submit">Sign In</button>
+    </div>
+  </form>
+  <form action="/reg" method="post">
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img__text m--up">
+          <h3>Don't have an account? Please Sign up!<h3>
+        </div>
+        <div class="img__text m--in">
+  
+          <h3>If you already has an account, just sign in.<h3>
+        </div>
+        <div class="img__btn">
+          <span class="m--up">Sign Up</span>
+          <span class="m--in">Sign In</span>
+        </div>
+      </div>
+      <div class="form sign-up">
+        <h2>Create your Account</h2>
+        <label>
+      
+          <span>Are a You Creator ??</span>
+          <label class="switch">""
+            <input type="checkbox" value="yes" name="creator" id="creator"/>
+            <span id = "s" class="slider round"></span>
+        </label>
+        </label>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" id="name"/>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" id="email"/>
+        </label>
+        <label>
+          <span>Phone</span>
+          <input type="text" name="phone" id="phone"/>
+        </label>
+        <label>
+          <span>Crypto address</span>
+          <input type="text" name="cryptId" id="cryptId"/>
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="pswd" id="pswd"/>
+        </label>
+        <button type="submit" class="submit" >Sign Up</button>
+  
+      </div>
+    </div>
+  </form>
+
+</div>
+
+</body>
+<script>
+  document.querySelector('.img__btn').addEventListener('click', function() {
+    document.querySelector('.cont').classList.toggle('s--signup');
+  });
+</script>
+<script src="app.js">
+</script>

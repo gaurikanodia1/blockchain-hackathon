@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Donate" ng-controller="ctrldetails"></html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Dashboard</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+
+</head>
+
+<body>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="top_nav_container">
+            
+            <from class="search_form">
+              <input type="text" class="form-control" placeholder="Search here...">
+              <button class="" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </from>
+            <div class="user_option_box">
+              <a href="/lsg" class="account-link">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span>
+                  Log Out
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="/index">
+              <span>
+                CREATIVE.CREATE
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="/tran">Transfer</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/alltrans">Transactions</a>
+                </li>
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  <!-- product section -->
+
+  <!-- <section class="product_section layout_padding">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/p1.png" alt="">
+              <a href="" class="add_cart_btn">
+                <span>
+                  Donate
+                </span>
+              </a>
+            </div>
+            <div class="detail-box">
+              <h5>
+                Rahul Desai
+              </h5>
+              <div class="product_info">
+                <h5>
+                  <span>www.abc.com</span>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <table class="table table-hover my-0">
+          <thead>
+            <tr>
+               
+              <th >Name</th>
+              <!-- <th >Profile</th> -->
+              <th >CryptId</th>
+              <th >weblink</th>
+              <!-- <th> Donate </th>	 -->
+                                  
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in table">
+              <td>{{item.name}}</td>
+              <!-- <td>{{item.profilepic}}</td> -->
+              <td>{{item.cryptId}}</td>
+              <td>{{item.weblink}}</td>
+              <td>
+                <a class="dropdown-item" href="/tran">
+                  <button type="button" class="btn btn-lg btn-primary" id="openPopUp" ng-click="donate(item.cryptId)">Donate</button>						
+
+                </a>
+
+                <!-- <li class="nav-item dropdown">
+                            
+                  <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown"> </a> 
+                   <div class="dropdown-menu dropdown-menu-end">
+                   
+                  
+                    <a class="dropdown-item" href="#">
+                    <button type="button" class="btn btn-lg btn-primary" ng-click="drop(item.date)">Delete</button>
+                    </a>
+                  </div>
+                </li> -->
+              
+            </td>
+              
+            </tr>
+          </tbody>
+        </table>
+        
+  <!-- end product section -->
+
+ 
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              <a href="" class="navbar-brand">
+                <span>
+                  Creatrive.Create
+                </span>
+              </a>
+            </h5>
+            <p>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              Bangaluru,India
+            </p>
+            <p>
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              +91 8160793197
+            </p>
+            <p>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+                rachit@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Information
+            </h5>
+            <p>
+              The Website used for donations for content creator
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_links">
+            <h5>
+              Useful Link
+            </h5>
+            <ul>
+              <li>
+                <a href="index.html">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/tran">
+                  Transactions
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./angular.js"></script>
+</body>
+
+</html>
